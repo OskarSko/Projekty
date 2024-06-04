@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrape Car Data</title>
+    <title>Scrape</title>
 </head>
 <body>
-    <h1>Choose a Car Brand to Scrape</h1>
-    <form method="post" action="{{ url_for('scrape') }}">
-        <select name="brand">
+    <h1>Scrape Data</h1>
+    <form method="post" action="/scrape">
+        <label for="brand">Choose brands to scrape:</label>
+        <select name="brand" id="brand" multiple>
             {% for brand in brands %}
                 <option value="{{ brand }}">{{ brand }}</option>
             {% endfor %}
