@@ -1,0 +1,47 @@
+version: '3'
+services:
+  scraper_engine:
+    build: ./scraper_engine
+    volumes:
+      - ./scraper_engine:/app
+    ports:
+      - "5001:5001"
+    networks:
+      - scraper_network
+
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - mongo:/data/db
+    ports:
+      - '27017:27017'
+    command: mongod --port 27017
+    networks:
+      - scraper_network
+  
+  flask_app:
+    volumes: 
+      - "./interface:/app"
+      - /var/run/docker.sock:/var/run/docker.sock
+    build:
+     context: ./interface
+     dockerfile: Dockerfile
+    ports:
+      - '5000:5000'
+    depends_on:
+      - scraper_engine
+    networks:
+      - scraper_network
+
+
+volumes:
+  mongo:
+    driver: local
+
+networks:
+  scraper_network:
+    driver: bridge
