@@ -1,9 +1,9 @@
-
 import asyncio
 import requests
 from bs4 import BeautifulSoup
 from pymongo import MongoClient
 from flask import Flask, request, jsonify
+from multiprocessing import Pool, cpu_count
 
 app = Flask(__name__)
 
@@ -39,16 +39,22 @@ async def save_to_mongodb(data, collection):
         else:
             print("Link already exists in the database. Skipping:", item['link'])
 
+def scrape_and_save(url):
+    try:
+        cars = asyncio.run(scrape_data(url))
+        asyncio.run(save_to_mongodb(cars, 'car_collection'))
+    except Exception as e:
+        print(f"Error processing {url}: {e}")
+
 @app.route('/scrape', methods=['POST'])
 def scrape():
     data = request.get_json()
-    url = data.get('url')
-    if url:
-        cars = asyncio.run(scrape_data(url))
-        asyncio.run(save_to_mongodb(cars, 'car_collection'))
+    urls = data.get('urls')
+    if urls and isinstance(urls, list) and all(isinstance(url, str) for url in urls):
+        with Pool(cpu_count()) as pool:
+            pool.map(scrape_and_save, urls)
         return jsonify({'status': 'success'})
-    return jsonify({'status': 'failed', 'reason': 'no url provided'}), 400
+    return jsonify({'status': 'failed', 'reason': 'no urls provided or invalid format'}), 400
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True, port=5001)
-    scrape()
