@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrape Car Data</title>
+</head>
+<body>
+    <h1>Choose a Car Brand to Scrape</h1>
+    <form method="post" action="{{ url_for('scrape') }}">
+        <select name="brand">
+            {% for brand in brands %}
+                <option value="{{ brand }}">{{ brand }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Scrape</button>
+    </form>
+</body>
+</html>

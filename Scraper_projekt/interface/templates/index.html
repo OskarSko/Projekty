@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTOSCRAPER</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="no-breathing">OTO<span class="highlight">SCRAPER</span></h1>
+
+        <!-- Formularz wyszukiwania -->
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Wpisz nazwę samochodu">
+            <button type="submit" class="button">Szukaj</button>
+        </form>
+
+        <!-- Formularz wyboru marki samochodu -->
+        <form method="post" action="{{ url_for('scrape') }}">
+            <select name="brand" class="styled-select">
+                {% for brand in brands %}
+                    <option value="{{ brand }}">{{ brand }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="button">Scrape</button>
+        </form>
+
+        <!-- Lista sortowania -->
+        <select id="sortOptions" class="styled-select" onchange="sortCars()">
+            <option value="newest">Najnowsze pojazdy</option>
+            <option value="oldest">Najstarsze pojazdy</option>
+            <option value="alphabetical">Alfabetycznie A-Z</option>
+            <option value="reverseAlphabetical">Alfabetycznie Z-A</option>
+            <option value="cheapest">Najtańsze</option>
+            <option value="mostExpensive">Najdroższe</option>
+            <option value="lowestMileage">Najmniejszy przebieg</option>
+            <option value="highestMileage">Największy przebieg</option>
+        </select>
+
+        <ul id="carsList"></ul>
+    </div>
+
+    <script>
+        let carsData = [];
+
+        async function fetchCars(query = '') {
+            try {
+                const response = await fetch(`/search?query=${query}`);
+                if (!response.ok) throw new Error('Network response was not ok');
+                const data = await response.json();
+                carsData = data;
+                displayCars(data);
+            } catch (error) {
+                console.error('Fetching cars failed:', error);
+            }
+        }
+
+        function displayCars(data) {
+            const carsList = document.getElementById('carsList');
+            carsList.innerHTML = '';
+            data.forEach(car => {
+                const carItem = document.createElement('li');
+                carItem.classList.add('car');
+
+                const carName = document.createElement('span');
+                carName.classList.add('car-name');
+                carName.textContent = car.nazwa;
+                carName.addEventListener('click', () => {
+                    carItem.classList.toggle('active');
+                });
+
+                const carImage = document.createElement('img');
+                carImage.src = car.zdjecie;
+                carImage.alt = car.nazwa;
+
+                const detailsList = document.createElement('ul');
+                detailsList.classList.add('details-list');
+                detailsList.innerHTML = `
+                    <li>Informacja: ${car.informacja}</li>
+                    <li>Przebieg: ${car.przebieg.replace(/[^\d.-]/g, '')}</li>
+                    <li>Paliwo: ${car.paliwo}</li>
+                    <li>Rok: ${car.rok}</li>
+                    <li>Cena: ${car.cena.replace('zł', '').replace(/\s+/g, '')}</li>
+                    <li>Skrzynia: ${car.skrzynia}</li>
+                `;
+
+                const link = document.createElement('a');
+                link.href = car.link;
+                link.textContent = 'Link';
+                link.classList.add('button');
+                link.target = '_blank';
+
+                carItem.appendChild(carName);
+                carItem.appendChild(carImage);
+                carItem.appendChild(detailsList);
+                carItem.appendChild(link);
+                carsList.appendChild(carItem);
+            });
+        }
+
+        function sortCars() {
+            const sortOption = document.getElementById('sortOptions').value;
+            let sortedCars = [...carsData];
+
+            if (sortOption === 'newest') {
+                sortedCars.sort((a, b) => b.rok - a.rok);
+            } else if (sortOption === 'oldest') {
+                sortedCars.sort((a, b) => a.rok - b.rok);
+            } else if (sortOption === 'alphabetical') {
+                sortedCars.sort((a, b) => a.nazwa.localeCompare(b.nazwa));
+            } else if (sortOption === 'reverseAlphabetical') {
+                sortedCars.sort((a, b) => b.nazwa.localeCompare(a.nazwa));
+            } else if (sortOption === 'cheapest') {
+                sortedCars.sort((a, b) => parseFloat(a.cena.replace(/[^\d.-]/g, '')) - parseFloat(b.cena.replace(/[^\d.-]/g, '')));
+            } else if (sortOption === 'mostExpensive') {
+                sortedCars.sort((a, b) => parseFloat(b.cena.replace(/[^\d.-]/g, '')) - parseFloat(a.cena.replace(/[^\d.-]/g, '')));
+            } else if (sortOption === 'lowestMileage') {
+                sortedCars.sort((a, b) => parseInt(a.przebieg.replace(/[^\d.-]/g, '')) - parseInt(b.przebieg.replace(/[^\d.-]/g, '')));
+            } else if (sortOption === 'highestMileage') {
+                sortedCars.sort((a, b) => parseInt(b.przebieg.replace(/[^\d.-]/g, '')) - parseInt(a.przebieg.replace(/[^\d.-]/g, '')));
+            }
+
+            displayCars(sortedCars);
+        }
+
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const query = document.getElementById('searchInput').value;
+            fetchCars(query);
+        });
+
+        fetchCars();
+    </script>
+</body>
+</html>

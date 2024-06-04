@@ -1,0 +1,131 @@
+/* Animacja tła */
+@keyframes breathingBackground {
+    0% {
+        background-color: #961212; /* Początkowy kolor - czerwień */
+    }
+    50% {
+        background-color: #0b2660; /* Kolor połowy animacji - błękit */
+    }
+    100% {
+        background-color: #961212; /* Końcowy kolor - znowu czerwień */
+    }
+}
+
+/* Styl ciała */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: breathingBackground 10s infinite alternate;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Styl kontenera */
+.container {
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Styl nagłówka */
+h1 {
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 20px;
+    background-color: #1b0a65c3; /* Neutralny szary kolor */
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.152);
+}
+
+h1.no-breathing {
+    background-color: #3f050538; /* Neutralny szary kolor */
+    animation: none;
+}
+
+.highlight {
+    color: #0b2660; /* Ciemnoniebieski kolor */
+}
+
+/* Styl listy */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Styl elementów listy */
+ul li {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styl dla obrazków */
+.car img {
+    display: block; /* Dodanie display: block; */
+    max-width: 300px;
+    border-radius: 10px;
+    margin-top: 10px; /* Dodanie górnego marginesu */
+    margin-bottom: 10px;
+    border: 2px solid #000; /* Czarna ramka o szerokości 2px */
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodanie cienia */
+}
+
+.car img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Dodanie większego cienia przy najechaniu */
+}
+
+/* Styl dla przycisków */
+a.button,
+button.button {
+    display: inline-block;
+    background-color: #0b681b;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+a.button:hover,
+button.button:hover {
+    background-color: #0c8420;
+}
+
+/* Stylowanie select */
+.styled-select {
+    display: inline-block;
+    background-color: #0b681b;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.styled-select:hover {
+    background-color: #0c8420;
+}
