@@ -1,35 +1,188 @@
 {
-    "Toyota": "https://www.otomoto.pl/osobowe/toyota?search%5Border%5D=created_at_first%3Adesc",
-    "Honda": "https://www.otomoto.pl/osobowe/honda?search%5Border%5D=created_at_first%3Adesc",
-    "BMW": "https://www.otomoto.pl/osobowe/bmw?search%5Border%5D=created_at_first%3Adesc",
-    "Mercedes": "https://www.otomoto.pl/osobowe/mercedes-benz?search%5Border%5D=created_at_first%3Adesc",
-    "Audi": "https://www.otomoto.pl/osobowe/audi?search%5Border%5D=created_at_first%3Adesc",
-    "Ford": "https://www.otomoto.pl/osobowe/ford?search%5Border%5D=created_at_first%3Adesc",
-    "Tesla": "https://www.otomoto.pl/osobowe/tesla?search%5Border%5D=created_at_first%3Adesc",
-    "Aston Martin": "https://www.otomoto.pl/osobowe/aston-martin?search%5Border%5D=created_at_first%3Adesc",
-    "Dacia": "https://www.otomoto.pl/osobowe/dacia?search%5Border%5D=created_at_first%3Adesc",
-    "Iveco": "https://www.otomoto.pl/osobowe/iveco?search%5Border%5D=created_at_first%3Adesc",
-    "Fiat": "https://www.otomoto.pl/osobowe/fiat?search%5Border%5D=created_at_first%3Adesc",
-    "Ferrari": "https://www.otomoto.pl/osobowe/ferrari?search%5Border%5D=created_at_first%3Adesc",
-    "KIA": "https://www.otomoto.pl/osobowe/kia?search%5Border%5D=created_at_first%3Adesc",
-    "Hyundai": "https://www.otomoto.pl/osobowe/hyundai?search%5Border%5D=created_at_first%3Adesc",
-    "Nissan": "https://www.otomoto.pl/osobowe/nissan?search%5Border%5D=created_at_first%3Adesc",
-    "Pegout": "https://www.otomoto.pl/osobowe/peugeot?search%5Border%5D=created_at_first%3Adesc",
-    "Opel": "https://www.otomoto.pl/osobowe/opel?search%5Border%5D=created_at_first%3Adesc",
-    "Suzuki": "https://www.otomoto.pl/osobowe/suzuki?search%5Border%5D=created_at_first%3Adesc",
-    "Jaguar": "https://www.otomoto.pl/osobowe/jaguar?search%5Border%5D=created_at_first%3Adesc",
-    "Volkswagen": "https://www.otomoto.pl/osobowe/volkswagen?search%5Border%5D=created_at_first%3Adesc",
-    "Porshe": "https://www.otomoto.pl/osobowe/porsche?search%5Border%5D=created_at_first%3Adesc",
-    "Renault": "https://www.otomoto.pl/osobowe/renault?search%5Border%5D=created_at_first%3Adesc",
-    "Lamborghini": "https://www.otomoto.pl/osobowe/lamborghini?search%5Border%5D=created_at_first%3Adesc",
-    "Volvo": "https://www.otomoto.pl/osobowe/volvo?search%5Border%5D=created_at_first%3Adesc",
-    "Subaru": "https://www.otomoto.pl/osobowe/subaru?search%5Border%5D=created_at_first%3Adesc",
-    "Maserati": "https://www.otomoto.pl/osobowe/maserati?search%5Border%5D=created_at_first%3Adesc",
-    "Chrysler": "https://www.otomoto.pl/osobowe/chrysler?search%5Border%5D=created_at_first%3Adesc",
-    "Hyundai": "https://www.otomoto.pl/osobowe/hyundai?search%5Border%5D=created_at_first%3Adesc",
-    "Jeep": "https://www.otomoto.pl/osobowe/jeep?search%5Border%5D=created_at_first%3Adesc",
-    "Skoda": "https://www.otomoto.pl/osobowe/skoda?search%5Border%5D=created_at_first%3Adesc",
-    "RAM": "https://www.otomoto.pl/osobowe/ram?search%5Border%5D=created_at_first%3Adesc",
-    "Infiniti": "https://www.otomoto.pl/osobowe/infiniti?search%5Border%5D=created_at_first%3Adesc",
-    "Smart": "https://www.otomoto.pl/osobowe/smart?search%5Border%5D=created_at_first%3Adesc"
+    "Toyota": [
+        "https://www.otomoto.pl/osobowe/toyota?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/toyota?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/toyota?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/toyota?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Honda": [
+        "https://www.otomoto.pl/osobowe/honda?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/honda?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/honda?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/honda?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "BMW": [
+        "https://www.otomoto.pl/osobowe/bmw?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/bmw?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/bmw?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/bmw?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Mercedes": [
+        "https://www.otomoto.pl/osobowe/mercedes-benz?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/mercedes-benz?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/mercedes-benz?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/mercedes-benz?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Audi": [
+        "https://www.otomoto.pl/osobowe/audi?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/audi?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/audi?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/audi?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Ford": [
+        "https://www.otomoto.pl/osobowe/ford?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/ford?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/ford?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/ford?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Tesla": [
+        "https://www.otomoto.pl/osobowe/tesla?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/tesla?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/tesla?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/tesla?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Aston Martin": [
+        "https://www.otomoto.pl/osobowe/aston-martin?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/aston-martin?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/aston-martin?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/aston-martin?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Dacia": [
+        "https://www.otomoto.pl/osobowe/dacia?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/dacia?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/dacia?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/dacia?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Iveco": [
+        "https://www.otomoto.pl/osobowe/iveco?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/iveco?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/iveco?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/iveco?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Fiat": [
+        "https://www.otomoto.pl/osobowe/fiat?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/fiat?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/fiat?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/fiat?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Ferrari": [
+        "https://www.otomoto.pl/osobowe/ferrari?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/ferrari?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/ferrari?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/ferrari?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "KIA": [
+        "https://www.otomoto.pl/osobowe/kia?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/kia?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/kia?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/kia?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Hyundai": [
+        "https://www.otomoto.pl/osobowe/hyundai?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/hyundai?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/hyundai?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/hyundai?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Nissan": [
+        "https://www.otomoto.pl/osobowe/nissan?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/nissan?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/nissan?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/nissan?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Peugeot": [
+        "https://www.otomoto.pl/osobowe/peugeot?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/peugeot?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/peugeot?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/peugeot?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Opel": [
+        "https://www.otomoto.pl/osobowe/opel?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/opel?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/opel?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/opel?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Suzuki": [
+        "https://www.otomoto.pl/osobowe/suzuki?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/suzuki?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/suzuki?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/suzuki?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Jaguar": [
+        "https://www.otomoto.pl/osobowe/jaguar?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/jaguar?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/jaguar?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/jaguar?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Volkswagen": [
+        "https://www.otomoto.pl/osobowe/volkswagen?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/volkswagen?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/volkswagen?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/volkswagen?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Porsche": [
+        "https://www.otomoto.pl/osobowe/porsche?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/porsche?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/porsche?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/porsche?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Renault": [
+        "https://www.otomoto.pl/osobowe/renault?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/renault?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/renault?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/renault?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Lamborghini": [
+        "https://www.otomoto.pl/osobowe/lamborghini?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/lamborghini?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/lamborghini?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/lamborghini?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Volvo": [
+        "https://www.otomoto.pl/osobowe/volvo?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/volvo?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/volvo?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/volvo?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Subaru": [
+        "https://www.otomoto.pl/osobowe/subaru?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/subaru?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/subaru?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/subaru?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Maserati": [
+        "https://www.otomoto.pl/osobowe/maserati?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/maserati?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/maserati?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/maserati?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Chrysler": [
+        "https://www.otomoto.pl/osobowe/chrysler?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/chrysler?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/chrysler?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/chrysler?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Jeep": [
+        "https://www.otomoto.pl/osobowe/jeep?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/jeep?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/jeep?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/jeep?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Skoda": [
+        "https://www.otomoto.pl/osobowe/skoda?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/skoda?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/skoda?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/skoda?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Citroen": [
+        "https://www.otomoto.pl/osobowe/citroen?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/citroen?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/citroen?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/citroen?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ],
+    "Mazda": [
+        "https://www.otomoto.pl/osobowe/mazda?search%5Border%5D=created_at_first%3Adesc",
+        "https://www.otomoto.pl/osobowe/mazda?search%5Border%5D=created_at_first%3Adesc&page=2",
+        "https://www.otomoto.pl/osobowe/mazda?search%5Border%5D=created_at_first%3Adesc&page=3",
+        "https://www.otomoto.pl/osobowe/mazda?search%5Border%5D=created_at_first%3Adesc&page=4"
+    ]
 }
