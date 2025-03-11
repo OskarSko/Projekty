@@ -6,3 +6,4 @@ Projekt został stworzony w celu analizy ofert pojazdów oraz wyciągania istotn
 ## 📌 Funkcjonalności
 - ✅ Pobieranie danych z wybranych marek
 - ✅ Filtrowanie wyników na podstawie określonych kryteriów (np. marka, model, rocznik, cena).
+- ✅ Wyszukiwanie pojazdów po nazwie
